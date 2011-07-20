@@ -1,0 +1,28 @@
+<% if @success %>
+  <aside class='flash success'>Your post was successful!</aside>
+<% elsif @failure %>
+  <aside class='flash failure'>There was a problem posting your update.</aside>
+<% end %>
+
+<form action='/post' method='post' id='post_form'>
+  <section id='text_input'>
+    <label for='update_text'>
+    <textarea id='update_text' name='update[text]' placeholder='Enter a status update...'></textarea>
+  </section>
+  <section id='services'>
+  <h3>Select Services:</h3>
+  <ul>
+    <% %w(twitter facebook linked_in).each do |service| %><li class='<%= service %>'>
+      <% if service?(service) %>
+        <input id='service_<%= service %>' checked='checked' type='checkbox' name='update[services][<%= service %>]' value='true'/>        
+        <label for='service_<%= service %>' class='service_label'><%= service %></label>
+      <% else %>
+        <a href='/auth/<%= service %>'><%= service %></a>
+      <% end %>
+    <% end %>
+  </ul>
+  </section>
+  <section id='post'>
+    <button type='submit'>Post Status</button>
+  </section>
+</form>

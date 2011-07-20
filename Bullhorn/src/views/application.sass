@@ -1,0 +1,128 @@
+@import css3.sass
+
+section, article, header, footer, nav, aside
+  display: block
+
+body
+  background: #777 url(/images/bg.png)
+  color: white
+  font-family: Ubuntu, Verdana, sans-serif
+
+#wrapper
+  width: 800px
+  margin: 0 auto
+
+#post_form
+  +box-shadow(2px,2px,12px,rgba(0,0,0,0.5))
+  +border-radius(8px)
+
+#top
+  text-align: center
+  h1
+    font-family: Ultra, Georgia, serif
+    text-transform: uppercase
+    font-size: 80px
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5)
+    margin: 15px 0 20px
+    img
+      vertical-align: top
+      margin-top: 15px
+      margin-right: 5px
+    em
+      color: #f63
+      font-style: normal
+
+#text_input
+  background: white
+  color: #555
+  padding: 15px
+  +border-top-radius(8px)
+  textarea
+    +vendor(box-sizing,border-box)  
+    width: 100%
+    padding: 10px
+    +border-radius(4px)
+    border: 1px solid #aaa
+    font-size: 22px
+    color: #777
+    font-family: Ubuntu, Verdana, sans-serif
+
+#services
+  +vertical-gradient(#ddd,#ccc)
+  text-align: center
+  vertical-align: middle
+  h3
+    display: inline-block
+    line-height: 100px
+    font-family: Ultra, serif
+    font-size: 24px
+    margin: 0 20px
+    font-weight: normal
+    color: #666
+    text-transform: uppercase
+  ul
+    display: inline-block
+    list-style: none
+    padding: 0
+    margin: 0
+    line-height: 100px
+  li
+    display: inline-block
+    position: relative
+    input
+      display: none
+    a, label
+      display: block
+      background: url(/images/services.png) no-repeat top left
+      text-indent: -999em
+      width: 100px
+      height: 100px
+    &.facebook 
+      a, label
+        background-position-x: center
+    &.linked_in 
+      a, label
+        background-position-x: right
+    label
+      cursor: pointer
+      background-position-y: center
+    input[type=checkbox]:checked + label
+      background-position-y: bottom
+    &:hover a, a:focus
+      background-position-y: center
+#post
+  background: #f63
+  text-align: center
+  padding: 15px
+  +border-bottom-radius(8px)
+  button
+    background: #f63
+    font-family: Ultra
+    text-transform: uppercase
+    padding: 15px 30px
+    font-size: 26px
+    color: white
+    border: 1px solid rgba(0,0,0,0.25)
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5)
+    +border-radius(5px)
+
+#bottom
+  text-align: center
+  color: #777
+  a
+    color: #f63
+  padding: 15px 0 30px
+  font-size: 14px
+
+aside.flash
+  margin: 15px 0
+  font-family: Ultra, Georgia, serif
+  font-size: 22px
+  text-align: center
+  padding: 20px
+  text-shadow: 1px 1px 2px black
+  +border-radius(8px)
+  &.success
+    background: #3a0
+  &.failure
+    background: #a33

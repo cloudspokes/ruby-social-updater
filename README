@@ -1,0 +1,13 @@
+Ruby Social Network Status Updater
+
+URL: http://www.cloudspokes.com/challenge_detail.html?contestID=200
+Blog: http://blog.cloudspokes.com/2011/06/ruby-social-network-status-updater.html
+Challenge end date: Wed May 25 04:00:00 GMT 2011
+
+Description
+===========
+<p>Write a small Ruby web app that updates a user’s status on a number of social networks.</p> 
+
+Requirements
+============
+<p>Write a small Rails or Sinatra app that allows the user to update their status on Chatter, LinkedIn, Twitter or Facebook. You must use 3 of these services. Use OAuth to authorize access to the services you choose. You can use OminAuth which currently supports all of these services. </p> <p>The application should have a simple interface and allow the users to authorize each service, display which services have been authorized and choose which of the services to send the status update to (i.ie, I’ve authorized Chatter, LinkedIn and Facebook but only want to send the status update to Chatter and LinkedIn this time).</p> <p>You’ll also need a way to ensure that users cannot post to each other social networks. This could be accomplished by either requiring a login and storing token, allowing a users to flush their session or some other method. Either way a users should only have access to their own auth tokens and be able to post to their own social networks. </p> <p>Host the application on Heroku, Cloud Foundry or some other service so that it can be easily tested.</p>

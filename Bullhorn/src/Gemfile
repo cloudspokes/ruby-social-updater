@@ -1,0 +1,19 @@
+# A sample Gemfile
+source "http://rubygems.org"
+
+gem 'omniauth'
+gem 'sinatra'
+gem 'sass'
+
+gem 'twitter'
+gem 'koala'
+gem 'linkedin'
+
+group :test do
+  gem 'rspec', '2.6.0'
+  gem 'rack-test'
+end
+
+group :production do
+  gem 'thin'
+end
